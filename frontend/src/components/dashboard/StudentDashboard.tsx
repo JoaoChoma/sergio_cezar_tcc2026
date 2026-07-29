@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { StudentShell } from "@/components/shared/StudentShell";
 export function StudentDashboard() {
   return (
@@ -8,6 +9,12 @@ export function StudentDashboard() {
         <p className="mt-4 max-w-2xl text-blue-100">
           Acompanhe seu nível, sua prática diária e a próxima atividade.
         </p>
+        <Link
+          href="/trilha"
+          className="mt-7 inline-flex rounded-md bg-brand-accent px-5 py-3 font-black text-brand"
+        >
+          Abrir primeira aula
+        </Link>
       </section>
       <section className="mt-8 grid gap-5 md:grid-cols-3">
         {[
@@ -33,7 +40,9 @@ export function StudentDashboard() {
               React, SPA, Virtual DOM e componentes.
             </p>
           </div>
-          <span className="font-black text-slate-500">Atividade inicial</span>
+          <Link href="/aulas/o-que-e-react" className="font-black text-brand">
+            Começar →
+          </Link>
         </div>
       </section>
     </StudentShell>
