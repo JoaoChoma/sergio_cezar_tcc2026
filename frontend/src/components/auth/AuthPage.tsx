@@ -13,7 +13,7 @@ export function AuthPage({ mode }: { mode: "login" | "register" }) {
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setPending(true);
-    window.setTimeout(() => router.push("/"), 350);
+    window.setTimeout(() => router.push("/onboarding"), 350);
   }
   return (
     <main className="grid min-h-screen bg-surface-soft lg:grid-cols-[1.05fr_0.95fr]">
@@ -61,6 +61,14 @@ export function AuthPage({ mode }: { mode: "login" | "register" }) {
               className="mt-2 w-full rounded-md border border-slate-300 px-4 py-3"
             />
           </label>
+          {isLogin && (
+            <Link
+              href="/recuperar-senha"
+              className="mt-3 block text-sm font-bold text-brand"
+            >
+              Esqueci minha senha
+            </Link>
+          )}
           <button
             disabled={pending}
             className="mt-7 w-full rounded-md bg-brand-accent px-5 py-3 font-black text-brand disabled:opacity-60"
