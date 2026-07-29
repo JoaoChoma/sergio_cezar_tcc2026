@@ -14,7 +14,7 @@ export function OnboardingPage() {
         experience: data.get("experience"),
       }),
     );
-    router.push("/");
+    router.push("/dashboard");
   }
   return (
     <main className="grid min-h-screen place-items-center bg-surface-soft p-8">

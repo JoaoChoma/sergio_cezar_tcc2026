@@ -13,7 +13,10 @@ export function AuthPage({ mode }: { mode: "login" | "register" }) {
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setPending(true);
-    window.setTimeout(() => router.push("/onboarding"), 350);
+    window.setTimeout(
+      () => router.push(isLogin ? "/dashboard" : "/onboarding"),
+      350,
+    );
   }
   return (
     <main className="grid min-h-screen bg-surface-soft lg:grid-cols-[1.05fr_0.95fr]">
