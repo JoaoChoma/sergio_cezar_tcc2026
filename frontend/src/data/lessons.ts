@@ -64,7 +64,9 @@ export const prototypeLessons: Lesson[] = [
         paragraphs: [
           [
             "React é uma biblioteca JavaScript voltada à construção de",
-            "interfaces baseadas em componentes.",
+            "interfaces baseadas em componentes. A abordagem",
+            "declarativa permite descrever o resultado visual esperado",
+            "e reutilizar partes da interface.",
           ].join(" "),
         ],
       },

@@ -4,6 +4,7 @@ import { Brand } from "@/components/shared/Brand";
 const items: ReadonlyArray<readonly [string, string]> = [
   ["/dashboard", "Visão geral"],
   ["/trilha", "Trilha"],
+  ["/revisao", "Revisão"],
 ];
 
 export function StudentSidebar({ active }: { active: string }) {

@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { CodeBlock } from "@/components/shared/CodeBlock";
+import { LessonChallengePanel } from "@/components/lesson/LessonChallengePanel";
 import { StudentShell } from "@/components/shared/StudentShell";
+import { prototypeChallenges } from "@/data/challenges";
 import type { Lesson } from "@/data/lessons";
 export function LessonPage({ lesson }: { lesson: Lesson }) {
+  const challenges = prototypeChallenges.filter(
+    (item) => item.lessonId === lesson.id,
+  );
   return (
     <StudentShell active="/trilha">
       <Link href="/trilha" className="font-bold text-brand">
@@ -45,6 +50,7 @@ export function LessonPage({ lesson }: { lesson: Lesson }) {
           </section>
         ))}
       </article>
+      <LessonChallengePanel challenges={challenges} />
     </StudentShell>
   );
 }
