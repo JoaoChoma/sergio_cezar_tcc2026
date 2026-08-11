@@ -66,6 +66,6 @@ export const prototypeWorlds: TrailWorld[] = [
     title: "Desafio Final",
     description: "Construa uma aplicação guiada.",
     icon: Trophy,
-    lessons: [],
+    lessons: [{ slug: "projeto-final", title: "Projeto guiado" }],
   },
 ];

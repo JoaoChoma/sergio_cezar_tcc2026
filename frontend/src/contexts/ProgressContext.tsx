@@ -49,7 +49,7 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
             xp: progress.xp + (correct ? 20 : 0),
             streak: Math.max(1, progress.streak),
             mistakes: correct
-              ? progress.mistakes.filter((item) => item !== id)
+              ? progress.mistakes
               : Array.from(new Set([...progress.mistakes, id])),
           }),
         updateProfile: (profile) => persist({ ...progress, profile }),

@@ -10,7 +10,7 @@ export function StudentShell({
   return (
     <div className="flex min-h-screen bg-surface-soft">
       <StudentSidebar active={active} />
-      <main className="min-w-0 flex-1 p-10">{children}</main>
+      <main className="rr-student-content min-w-0 flex-1 p-10">{children}</main>
     </div>
   );
 }

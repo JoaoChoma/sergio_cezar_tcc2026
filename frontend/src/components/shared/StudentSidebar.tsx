@@ -5,6 +5,10 @@ const items: ReadonlyArray<readonly [string, string]> = [
   ["/dashboard", "Visão geral"],
   ["/trilha", "Trilha"],
   ["/revisao", "Revisão"],
+  ["/conquistas", "Conquistas"],
+  ["/certificado", "Certificado"],
+  ["/perfil", "Perfil"],
+  ["/ajuda", "Como funciona"],
 ];
 
 export function StudentSidebar({ active }: { active: string }) {
